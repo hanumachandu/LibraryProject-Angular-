@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js" ng-controller="MainCtrl"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title ng-bind="metaservice.metaTitle()"></title>
+  <meta name="description" content="{{ metaservice.metaDescription() }}" />
+  <meta name="keywords" content="{{ metaservice.metaKeywords() }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <!-- Bootstrap -->
+    <link href="assests/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="assests/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="assests/vendors/nprogress/nprogress.css" rel="stylesheet">
+    
+    <!-- Custom Theme Style -->
+    <link href="assests/build/css/custom.min.css" rel="stylesheet">
+    <!--custom css file-->
+    <link rel="stylesheet" href="assests/css/custom.css">
+    <!-- custom js file -->
+    
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
+</head>
+<body>
+ <div class="nav-md">
+
+ <div ui-view="header"></div>
+ <div ui-view="content"></div>
+ <div ui-view="footer"></div>
+ </div>
+ 
+ 
+  <!-- jQuery -->
+    <script src="assests/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assests/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="assests/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="assests/vendors/nprogress/nprogress.js"></script>
+    <!-- validator -->
+    <script src="assests/vendors/validator/validator.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="assests/build/js/custom.min.js"></script>
+
+  <script src="bower_components/angular/angular.js"></script>
+ <script src="bower_components/angular-ui-router/angular-ui-router.js"></script>
+  <script src="app.js"></script>
+  <script src="metaService.js"></script>
+  <script src="login/login.js"></script>
+ <script src="registration/registration.js"></script>
+ <script src="forgot/forgot.js"></script>
+ <script src="changepassword/changepassword.js"></script>
+ <script src="home/home.js"></script>
+ <script src="bookcheckin/bookcheckin.js"></script>
+ <script src="list/list.js"></script>
+ <script src="search/search.js"></script>
+ <script src="details/details.js"></script>
+ <script src="booksell/booksell.js"></script>
+   <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+    
+   </body>
+</html>

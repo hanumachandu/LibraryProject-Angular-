@@ -1,0 +1,54 @@
+.form-error{
+    text-shadow: none;
+    color:#710909;
+    font-size: 15px;
+}
+.login_form{
+    background:gray;
+    border-radius: 8px;
+}
+body
+{
+    background: #fff;
+
+}
+.heading{
+    font-size: 30px;
+    color: #122b40;
+}
+.textapply{
+    text-shadow: none;
+    color:white;
+}
+.inputstyle{
+   padding: 8px;
+    border-radius: 4px;
+}
+.redirect{
+    font-size: 14px;
+    color:#224455;
+    margin: 1px;
+
+}
+.customimg{
+    width: 100%;
+    height: auto;
+    background-image: none;
+    margin-left: 15%;
+    margin-top: 20px;
+    padding: 4px;
+}
+.contentBlock{
+margin-left:250px;
+}
+.left_col_fix
+{
+position:fixed !important;
+}
+
+
+
+
+
+
+

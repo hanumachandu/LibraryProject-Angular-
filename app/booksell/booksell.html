@@ -1,0 +1,18 @@
+<body>
+<div class="contentBlock">
+    <section>
+    <header>Book Sell</header>
+    </section>
+    <div>
+        <form name="myForm">
+            <select ng-model="book.bookId" ng-options="book._id as book.title for book in booklist"></select><br>
+            <input type="number" placeholder="Quantity" ng-model="book.quantity" id="quantity" name="quantity"><br>
+            <input type="button" value="Submit" ng-click="sellbook(book)" class="btn btn-success">
+        </form>
+    </div>
+    <div class="form-error">
+        {{booksellres}}
+    </div>
+
+</div>
+</body>

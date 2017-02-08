@@ -1,0 +1,98 @@
+<body>
+      <div class="contentBlock">
+          <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Search Books</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                   
+
+
+
+                <form name="form" style="clear:both;" >
+                    
+                <div class="list form-floating">
+                  
+                  <label class="item item-input item-floating-label">
+                    <span class="input-label">Enter ISBN</span>
+                    <input type="text" class="form-control col-md-7 col-xs-12" ng-model="searchData.ISBN" ng-keyup="disableButton(searchData.ISBN)" placeholder="Enter ISBN" ng-readonly="disableISBN">
+                  </label>
+                  <p class="text-center bror">OR</p>
+                  <label class="item item-input item-floating-label">
+                    <span class="input-label">Enter Title</span>
+                    <input type="text" class="form-control col-md-7 col-xs-12"  ng-model="searchData.title" ng-keyup="disableButton2(searchData.title)" placeholder="Enter Title" ng-readonly="disableTitle">
+                  </label>
+                    
+                    <div class="button-bar twobuttons row">
+                     <button type="submit" class="btn btn-success" ng-if="searchbyISBN" ng-disabled="searchData.ISBN == '' && searchData.title == ''" ng-click="searchByProp('ISBN', searchData.ISBN)">
+                        Search By ISBN
+                      </button>
+                      
+                      <button type="submit" class="btn btn-success" ng-if="!searchbyISBN"  ng-disabled="searchData.ISBN == '' && searchData.title == ''" ng-click="searchByProp('title', searchData.title)">
+                          Search By Title
+                        </button>
+
+                      </div>
+                  </div>  
+           </form>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+        <!-- /page content -->
+        <div ng-show="resultsBlock">
+        <table class="table table-striped books">
+                      <thead>
+                        <tr>
+                          <th style="width: 1%">#</th>
+                          <th style="width: 20%">Title of Book</th>
+                          <th>ISBN</th>
+                          <th>Publisher</th>
+                          <th>Quantity</th>
+                         
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr ng-repeat="item in searchResults">
+                          <td>{{$index+1}}</td>
+                          <td>
+                            <a>{{item.title}}</a>
+                          </td>
+                          <td>
+                            {{item.ISBN}}
+                          </td>
+                          <td>
+                            {{item.publisher}}
+                          </td>
+                          <td>
+                            {{item.quantity}}
+                          </td>
+                          <!-- <td>
+                            <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                            <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
+                            <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                          </td> -->
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                    </div>
+                </div>
+            
+          </body>
+
+
+

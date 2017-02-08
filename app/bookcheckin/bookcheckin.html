@@ -1,0 +1,114 @@
+
+   
+           <body>
+           <div class="contentBlock">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Books Check In</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <form name="form" style="clear:both;" >
+                    
+                      <div class="list form-floating">
+                       <label class="item item-input item-floating-label">
+                          <span class="input-label">ISBN13<em>*</em></span>
+                          <input type="text" class="form-control col-md-7 col-xs-12" placeholder="ISBN13*" ng-model='bookcheckin.ISBN13' name="ISBN13" id="ISBN13" required="required">
+                        </label>
+                         <div class="form-error required">
+
+                           <div class="form-validation-message" ng-message="required" ng-show="form.ISBN13.$error.required && form.ISBN13.$dirty">This field is required</div>
+                      
+
+                        </div>
+
+                        <label class="item item-input item-floating-label">
+                          <span class="input-label">ISBN10<em>*</em></span>
+                          <input type="text" class="form-control col-md-7 col-xs-12" placeholder="ISBN10*" ng-model='bookcheckin.ISBN10' name="ISBN10" id="ISBN10" required="required">
+                        </label>
+                         <div class="form-error required">
+
+                           <div class="form-validation-message" ng-message="required" ng-show="form.ISBN10.$error.required && form.ISBN10.$dirty">This field is required</div>
+                      
+                        </div>
+
+                        <label class="item item-input item-floating-label">
+                          <span class="input-label">Title<em>*</em></span>
+                          <input type="text" class="form-control col-md-7 col-xs-12" placeholder="Title*" ng-model='bookcheckin.title' name="title" id="title" required="required" ng-click="getISBNdetails(bookcheckin.ISBNN)">
+                        </label>
+                        <div class="form-error required">
+                           <div class="form-validation-message" ng-message="required" ng-show="form.title.$error.required && form.title.$dirty">This field is required</div>
+                         </div>
+                        <label class="item item-input item-floating-label">
+                          <span class="input-label">Publisher<em>*</em></span>
+                          <input type="text" class="form-control col-md-7 col-xs-12" placeholder="Publisher*" ng-model='bookcheckin.publisher' name="publisher" id="publisher" required="required">
+                        </label>
+                        <div class="form-error required">
+                           <div class="form-validation-message" ng-message="required" ng-show="form.publisher.$error.required && form.publisher.$dirty">This field is required</div>
+                         </div>
+
+                        <label class="item item-input item-floating-label">
+                          <span class="input-label">Quantity<em>*</em></span>
+                          <input type="number" class="form-control col-md-7 col-xs-12" placeholder="Quantity*" ng-model='bookcheckin.quantity' name="quantity" id="quantity" ng-pattern="/^[0-9\s]*$/" required="required">
+                        </label>
+                            <div class="form-error required">
+                          <div class="form-validation-message" ng-message="pattern" ng-show="form.quantity.$error.pattern && form.quantity.$dirty">Allow only digits</div> 
+                        </div>
+                        <label class="item item-input item-floating-label">
+                          <span class="input-label">Price<em>*</em></span>
+                          <input type="text" class="form-control col-md-7 col-xs-12" placeholder="Price*" ng-model='bookcheckin.price' currency name="price" id="price" ng-pattern="/^[0-9.\s]*$/" required="required">
+                        </label>
+                        <div class="form-error required">
+                           <div class="form-validation-message" ng-message="required" ng-show="form.price.$error.required && form.price.$dirty">This field is required</div>
+                         </div>
+                         <div class="form-error required">
+                          <div class="form-validation-message" ng-message="pattern" ng-show="form.price.$error.pattern && form.price.$dirty">Allow only digits</div> 
+                        </div>
+                         
+                        <label class="item item-input item-floating-label">
+                          <span class="input-label">Bin Location</span>
+                          <input type="text" placeholder="Bin Location" ng-model='bookcheckin.binLocation'>
+                        </label>
+                        <br/>
+                        <label class="item item-input item-floating-label">
+                          <span class="input-label">Reading Level</span>
+                          <input type="text" placeholder="Reading Level" ng-model='bookcheckin.readinglevel'>
+                        </label> 
+                          
+                          <div class="button-bar twobuttons row">
+                              <a class="btn btn-primary" href="#/index">Cancel</a>
+                              <button ng-disabled="!form.$valid || isbnvalidation.error || isbnvalidation.lengtherror"  ng-click="insertBook(bookcheckin)" class="btn btn-success">
+                              Submit
+                            </button>
+
+                            </div>
+                        </div>  
+                 </form>
+                      
+                  </div>
+                </div>
+              </div>
+            </div>
+             
+           </div>
+           
+
+           
+         
+        <!-- /page content -->
+        </body>
+
+       
+      
+
+  
